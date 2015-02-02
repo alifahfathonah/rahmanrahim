@@ -15,7 +15,7 @@
         <form action="<?=base_url();?>administratorPA/updatejawaban" method="post"  name="updatejawaban">
            <div class="title-grid"><input style="color: black; height: 20px; font-family: verdana; " type="text" name="judul" id="judul" readonly value="<?php $tugas = $this->tugas_model->select_one_tugas($tugas_id); echo $tugas->judul; ?>" size="21" /></div>
            <div class="content-gird" style="height: 600px;"> 
-               <div class="floatdropdownartikel" style="margin-right:0px;">
+               <div class="floatdropdownartikel" style="margin-right:-30px;">
                    <h2><?php echo $username; ?></h2>
                </div>
     <div id="wysihtml5-editor-toolbar">        

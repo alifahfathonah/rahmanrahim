@@ -20,7 +20,8 @@
         <div class="floatdropdownartikel" style="margin-right:0px;">
              <select name="kategori" class="dropdownartikel" >
                             <option value="Tugas Jumat" <?php if($kategori=='Tugas Jumat')echo" selected";?> >Tugas Jumat</option>
-                            <option value="Tugas Mingguan" <?php if($kategori=='Tugas Mingguan')echo" selected";?> >Tugas Mingguan</option>                           
+                            <option value="Tugas Ekstra" <?php if($kategori=='Tugas Ekstra')echo" selected";?> >Tugas Ekstra</option>                           
+                            <option value="Laporan Hasil Kerja" <?php if($kategori=='Laporan Hasil Kerja')echo" selected";?> >Laporan Hasil Kerja</option>                           
                             </select>
           <select name="subkategori" class="dropdownartikel" style="margin-top:20px;"> 
                             <option value="Tauqid"  <?php if($subkategori=='Tauqid')echo" selected"; ?> >Tauqid</option>
@@ -89,7 +90,7 @@
       <textarea class="textareastyle" id="wysihtml5-editor"  name="artikel" spellcheck="false" wrap="off" autofocus placeholder="Enter something ...">
             <?php echo $artikel; ?></textarea>
     </section>
-               <div style="margin-top:10px;">
+               <div style="margin-top:20px;">
                    <input type="submit"  name="update"  class="button-a blue" value="UPDATE"/>
                    <input type="submit"  name="back"  class="button-a gray" value="BACK"/>
                    

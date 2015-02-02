@@ -10,7 +10,7 @@
 			<div id="home_about" class="box">
            	  <h2>Sekolah Laduni</h2>
                   Tugas Jumat adalah Perintah untuk mengingat Allah pada setiap hari Jumat yaitu ketika waktu masuk Sholat pada hari Jumat atau pada saatnya Sholat Dhuhur sehingga bukan mendirikan Sholat Jumat.
-                  <br/><br/>Tugas Mingguan adalah 
+                  <br/><br/>Tugas Ekstra adalah 
             </div>
             
             <div id="home_gallery" class="box no_mr">
@@ -125,7 +125,7 @@
             <a href="#home" class="slider_nav_btn previous_btn">Previous</a>
             <a href="#tauqid" class="slider_nav_btn next_btn">Next</a> 
         </div> 
-        <div class="section section_with_padding" id="tauqid"> 
+        <div class="section section_with_padding" style="overflow: auto;" id="tauqid"> 
             <div class="img_border img_fl">
                 	<a href="#tauqid"><img src="<?php echo base_url(); ?>images/tauqid.jpg" alt="tauqid" width="80" /></a>
                 </div>
@@ -150,10 +150,10 @@
             <?php endforeach; ?>
             </div> 
             <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->subkategori!='Tauqid' || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->subkategori!='Tauqid' || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                
@@ -165,7 +165,7 @@
             <a href="#tugas" class="slider_nav_btn previous_btn">Previous</a>
             <a href="#aqidah" class="slider_nav_btn next_btn">Next</a> 
         </div> 
-        <div class="section section_with_padding" id="aqidah"> 
+        <div class="section section_with_padding" style="overflow: auto;" id="aqidah"> 
             <div class="img_border img_fl">
                 	<a href="#aqidah"><img src="<?php echo base_url(); ?>images/aqidah.jpg" alt="aqidah" width="80" /></a>
                 </div>
@@ -190,10 +190,10 @@
             <?php endforeach; ?>
             </div> 
             <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->subkategori!='Aqidah' || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->subkategori!='Aqidah' || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                
@@ -205,7 +205,7 @@
             <a href="#tauqid" class="slider_nav_btn previous_btn">Previous</a>
             <a href="#kesangyangan" class="slider_nav_btn next_btn">Next</a> 
         </div>
-        <div class="section section_with_padding" id="kesangyangan"> 
+        <div class="section section_with_padding" style="overflow: auto;"  id="kesangyangan"> 
             <div class="img_border img_fl">
                 	<a href="#kesangyangan"><img src="<?php echo base_url(); ?>images/kesangyangan.jpg" alt="kesangyangan" width="80" /></a>
                 </div>
@@ -229,10 +229,10 @@
             <?php endforeach; ?>
             </div> 
             <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->subkategori!='Kesangyangan' || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->subkategori!='Kesangyangan' || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                
@@ -244,7 +244,7 @@
             <a href="#aqidah" class="slider_nav_btn previous_btn">Previous</a>
             <a href="#laduni" class="slider_nav_btn next_btn">Next</a> 
         </div>
-        <div class="section section_with_padding" id="laduni"> 
+        <div class="section section_with_padding" style="overflow: auto;"  id="laduni"> 
             <div class="img_border img_fl">
                 	<a href="#laduni"><img src="<?php echo base_url(); ?>images/laduni.jpg" alt="laduni" width="80" /></a>
                 </div>
@@ -268,10 +268,10 @@
             <?php endforeach; ?>
             </div> 
             <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->subkategori!='Laduni' || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->subkategori!='Laduni' || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                
@@ -284,7 +284,7 @@
             <a href="#umum" class="slider_nav_btn next_btn">Next</a> 
         </div>
         
-        <div class="section section_with_padding" id="umum"> 
+        <div class="section section_with_padding" style="overflow: auto;"  id="umum"> 
             <div class="img_border img_fl">
                 	<a href="#umum"><img src="<?php echo base_url(); ?>images/umum.jpg" alt="umum" width="80" /></a>
                 </div>
@@ -294,7 +294,7 @@
             <?php             
             if(isset($rows)):            
             ?>
-            <div class="half left">
+            <div class="three left">
                 <h3>Tugas Jumat</h3>
             <?php 
                 foreach ($rows as $row):                 
@@ -307,11 +307,22 @@
                 ?>
             <?php endforeach; ?>
             </div> 
-            <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+            <div class='three left'>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->subkategori!='Umum' || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->subkategori!='Umum' || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
+                 ?>
+                <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
+                <?php                
+                ?>
+            <?php endforeach; ?>
+            </div>
+            <div class='three right'>
+                <h3>Laporan Hasil Kerja</h3>
+            <?php 
+                foreach ($rows as $row):                 
+                if ($row->subkategori!='Umum' || $row->status=='Not Published' || $row->kategori!='Laporan Hasil Kerja') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                
@@ -325,7 +336,7 @@
         </div>
         
         
-        <div class="section section_with_padding" id="news"> 
+        <div class="section section_with_padding" style="overflow: auto;"  id="news"> 
             <div class="img_border img_fl">
                 	<a href="#tauqid"><img src="<?php echo base_url(); ?>images/news.png" alt="tauqid" width="80" /></a>
                 </div>
@@ -335,7 +346,7 @@
             <?php             
             if(isset($rows)):            
             ?>
-            <div class="half left">
+            <div class="three left">
                 <h3>Tugas Jumat</h3>
             <?php 
                 foreach ($rows as $row):                 
@@ -348,11 +359,22 @@
                 ?>
             <?php endforeach; ?>
             </div> 
-            <div class='half right'>
-                <h3>Tugas Mingguan</h3>
+            <div class='three left'>
+                <h3>Tugas Ekstra</h3>
             <?php 
                 foreach ($rows as $row):                 
-                if ($row->news==0 || $row->status=='Not Published' || $row->kategori!='Tugas Mingguan') continue;                    
+                if ($row->news==0 || $row->status=='Not Published' || $row->kategori!='Tugas Ekstra') continue;                    
+                 ?>
+                <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
+                <?php                
+                ?>
+            <?php endforeach; ?>
+            </div>
+            <div class='three right'>
+                <h3>Laporan Hasil Kerja</h3>
+            <?php 
+                foreach ($rows as $row):                 
+                if ($row->news==0 || $row->status=='Not Published' || $row->kategori!='Laporan Hasil Kerja') continue;                    
                  ?>
                 <a href="<?php echo base_url()."sekolah/detailtugasjumat/".$row->id_tugas;?>" class="eventslide"><strong><?php echo $row->judul; ?></strong><br/></a>
                 <?php                

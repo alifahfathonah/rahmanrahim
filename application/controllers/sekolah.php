@@ -45,6 +45,9 @@ class Sekolah extends CI_Controller {
 
                 $jawaban = $this->sekolah_model->select_jawaban_tugas($_SESSION['username'], $tugas->id_tugas);
                 $data['jawaban'] = $jawaban;
+                
+                $all = $this->sekolah_model->get_jawaban_tugas($tugas->id_tugas);
+                $data['all'] = $all;
 
 
                 $this->load->view('detail_tugas_jumat_view', $data);

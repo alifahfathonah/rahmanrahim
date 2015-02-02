@@ -89,6 +89,23 @@ class Sekolah_model extends CI_Model{
         }
     }
     
+    function get_jawaban_tugas($tugas_id)
+    {   
+        $SQL = "select * from jawab j, member m where j.tugas_id = '$tugas_id' and j.trash = 'n' and j.parent = 0 and m.username = j.username";
+        $query = $this->db->query($SQL);
+        if($this->db->affected_rows() > 0)
+        {
+            foreach ($query->result() as $row) {           
+                $data[] =   $row;
+            }
+            return $data;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
     function select_one_jawaban($id_jawaban)
     {
         $SQL = "select * from jawab where id_jawaban = ?";

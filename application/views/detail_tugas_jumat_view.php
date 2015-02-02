@@ -11,6 +11,7 @@
         <script src="<?php echo base_url(); ?>js/advanced.js"></script>
         <!-- Library -->
         <script src="<?php echo base_url(); ?>js/wysihtml5-0.3.0.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/artikel/stylesheet.css" media="screen"  />
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/styleadministrator.css" />
     </head>
@@ -25,10 +26,25 @@
             <?php echo $tugas->artikel; ?>           
             <hr/>
 
+           
+            <?php if ( isset($all) && $all!=null): 
+                foreach ($all as $row): ?>
+            <div style="float:left;">
+            <?php if($row->foto==NULL || $row->foto=='') { ?>
+            <img src="<?php echo base_url(); ?>images/box.png" alt="bite" width="65" height="70"/>
+            <?php }  else {
+                ?> <img src="<?php echo base_url().'uploads/'.$row->foto; ?>" width="65" height="70"/>
+           <?php } ?>
+            </div>
+            <strong>&nbsp;<?php echo $row->username; ?></strong><br/>&nbsp;<?php echo $row->lastedit; ?>
+            <br/><br/><br/><br/>
+            <?php echo $row->jawaban; ?>   
+            <hr/>
+            <?php endforeach; endif; ?>
             <form action="<?= base_url(); ?>sekolah/createjawaban" method="post"  name="createjawaban">
                 <div style="margin-top:50px;">
                     <center>
-                        <h2>Jawaban Tugas Anda</h2>
+                        <h2>Tanggapan</h2>
                         <br/>
                         <input type="hidden" name="tugas_id" value="<?php echo $tugas->id_tugas; ?>"> 
                         <div id="wysihtml5-editor-toolbar">
@@ -75,12 +91,12 @@
                                 <a data-wysihtml5-dialog-action="save">OK</a>&nbsp;<a data-wysihtml5-dialog-action="cancel">Cancel</a>
                             </div>
                             <section class="sectionstyle">
-                                <textarea class="textareastyle" id="wysihtml5-editor"  name="jawaban" spellcheck="false" wrap="off" autofocus placeholder="Ketik Jawaban Anda Disini...."><?php if ($jawaban != null)
+                                <textarea class="textareastyle" id="wysihtml5-editor" style="height:60%;"  name="jawaban" spellcheck="false" wrap="off" autofocus placeholder="Ketik Jawaban Anda Disini...."><?php if ($jawaban != null)
                 echo $jawaban->jawaban; ?></textarea>
                             </section>
                     </center>
                 </div>
-                <div style="margin-top:5px; margin-left:47px;">
+                <div style="margin-top:-160px; margin-left:47px;">
                     <?php if ($jawaban != null) { ?>
                         <input type="submit"  name="update"  class="button-a blue" value="UPDATE"/>
                     <?php } else { ?>
@@ -105,6 +121,15 @@
         var composer = editor.composer;
         composer.selection.selectNode(editor.composer.element.querySelector("h1"));
     });
+    
+    
+    
+    $(document).ready(function(){
+         $("html, body").animate({
+         scrollTop:0
+     },"slow");
+
+});
 </script>
 </html>
 
